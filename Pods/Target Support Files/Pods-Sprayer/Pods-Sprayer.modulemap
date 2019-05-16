@@ -1,0 +1,6 @@
+framework module Pods_Sprayer {
+  umbrella header "Pods-Sprayer-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,73 @@
+//
+//  PrefixHeader.pch
+//  e-Healthy
+//
+//  Created by FangLin on 16/11/2.
+//  Copyright © 2016年 FangLin. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#ifndef __IPHONE_3_0
+//#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+//头文件
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#import "UIView+Category.h"
+#import "DisplayUtils.h"
+#import "CustemNavItem.h"
+#import "BlueToothManager.h"
+#import "BlueWriteData.h"
+#endif
+
+//debug
+#ifdef DEBUG
+#define DLog( s, ... ) NSLog( @"<%p %@:(%d)> %@", self, [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
+#else
+#define DLog( s, ... )
+#endif
+
+#define JSONResponseSerializerWithDataKey @"JSONResponseSerializerWithDataKey"
+
+//颜色
+#define RGBColor(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b/255.0) alpha:a]
+#define HexRGBAlpha(rgbValue,a) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:(a)]
+
+
+//屏幕的宽度高度
+#define screen_width [UIScreen mainScreen].bounds.size.width
+#define screen_height [UIScreen mainScreen].bounds.size.height
+#define nav_height 44
+
+//判断是否iPhone X
+#define IS_iPhoneX              ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+// 状态栏高度
+#define kStatusBarHeight        (IS_iPhoneX ? 44.f : 20.f)
+// 顶部导航栏高度
+#define kNavigationBarHeight    44.f
+// 顶部安全距离
+#define kSafeAreaTopHeight      (IS_iPhoneX ? 88.f : 64.f)
+// 底部安全距离
+#define kSafeAreaBottomHeight   (IS_iPhoneX ? 34.f : 0.f)
+// Tabbar高度
+#define kTabbarHeight           49.f + kSafeAreaBottomHeight
+// 去除上下导航栏剩余中间视图高度
+#define ContentHeight           (kScreenHeight - kSafeAreaTopHeight - kSafeAreaBottomHeight - kTabbarHeight)
+
+//
+#define tabbarHeight 49
+
+#define BleConnectSuc @"BleConnectSuc"//蓝牙连接成功
+#define ConnectSucceed @"ConnectSucceed"//连接成功
+#define PeripheralDidConnect @"peripheralDidConnect"//断开连接
+#define IsDisplayMedInfo @"IsDisplayMedInfo" //是否显示了药瓶信息
+
+
+
+#endif /* PrefixHeader_pch */

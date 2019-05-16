@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="83" id="KGk-i7-Jjw" customClass="PatientInfoTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="357" height="77"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="357" height="76"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G3f-Lv-1hw">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="2tk-kR-PsB"/>
+                            <constraint firstAttribute="width" constant="45" id="ZD4-Db-3IJ"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IuW-if-Snq">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="KsZ-Sa-zhx"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="device-status-icon-on" translatesAutoresizingMaskIntoConstraints="NO" id="w7T-m6-k0o">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="9AM-7Y-RlS"/>
+                            <constraint firstAttribute="height" constant="30" id="nJ0-OL-eaB"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="w7T-m6-k0o" firstAttribute="centerY" secondItem="IuW-if-Snq" secondAttribute="centerY" id="17o-7n-RvA"/>
+                    <constraint firstItem="G3f-Lv-1hw" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="DHd-Xi-MGS"/>
+                    <constraint firstItem="G3f-Lv-1hw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Fou-BX-QVj"/>
+                    <constraint firstItem="IuW-if-Snq" firstAttribute="centerY" secondItem="G3f-Lv-1hw" secondAttribute="centerY" id="Vxp-id-2Ok"/>
+                    <constraint firstAttribute="trailing" secondItem="w7T-m6-k0o" secondAttribute="trailing" constant="10" id="mLe-9i-Lhe"/>
+                    <constraint firstItem="IuW-if-Snq" firstAttribute="leading" secondItem="G3f-Lv-1hw" secondAttribute="trailing" constant="20" id="oA9-78-feF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="headImageView" destination="G3f-Lv-1hw" id="Q9X-GN-x0O"/>
+                <outlet property="nameLabel" destination="IuW-if-Snq" id="cON-ox-m18"/>
+                <outlet property="selectImageView" destination="w7T-m6-k0o" id="AfD-dm-cf5"/>
+            </connections>
+            <point key="canvasLocation" x="52.5" y="34.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="device-status-icon-on" width="22" height="22"/>
+    </resources>
+</document>

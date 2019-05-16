@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScanResultViewController">
+            <connections>
+                <outlet property="codeLabel" destination="r1a-Zn-UZy" id="oVm-qy-HkM"/>
+                <outlet property="finishBtn" destination="vTU-DR-BXS" id="ZgO-IH-awb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTU-DR-BXS">
+                    <state key="normal" backgroundImage="scan-it-icon-duigou"/>
+                    <connections>
+                        <action selector="finishAction:" destination="-1" eventType="touchUpInside" id="Jij-OE-FYi"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Device Serial Number is" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZ1-dh-0Eh">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="0VM-w5-Tcu"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.031372549019607843" green="0.33725490196078434" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3A51231" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1a-Zn-UZy">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="5S2-uZ-wI0"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <color key="textColor" red="0.031372549019607843" green="0.33725490196078434" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.94901960784313721" green="0.98039215686274506" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vTU-DR-BXS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0Pn-wG-ood"/>
+                <constraint firstItem="fZ1-dh-0Eh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Pxu-8g-niA"/>
+                <constraint firstItem="vTU-DR-BXS" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-70" id="lk1-kO-YXZ"/>
+                <constraint firstItem="fZ1-dh-0Eh" firstAttribute="top" secondItem="vTU-DR-BXS" secondAttribute="bottom" constant="25" id="nQC-GG-mv4"/>
+                <constraint firstItem="r1a-Zn-UZy" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ouf-iR-5CP"/>
+                <constraint firstItem="r1a-Zn-UZy" firstAttribute="top" secondItem="fZ1-dh-0Eh" secondAttribute="bottom" constant="15" id="sWa-9U-Ug3"/>
+            </constraints>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="scan-it-icon-duigou" width="136" height="136"/>
+    </resources>
+</document>
