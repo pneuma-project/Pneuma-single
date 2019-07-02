@@ -180,22 +180,7 @@ static NSString *Cell_TWO = @"cellTwo";
     NSString * dateStr = timeArr1[0];
     [timeArr2 addObject:dateStr];
     for (int i = 0; i<timeArr1.count; i++) {
-        if (i==timeArr1.count -1) {
-            NSArray * arr = [dataArr[1][i] componentsSeparatedByString:@"/"];
-            index1 += [arr[0] floatValue];
-            index2 += [arr[1] floatValue];
-            index4 ++;
-//            for (NSString * num in dataArr[2]) {
-//
-//            }
-            index3 += [dataArr[2][i] floatValue];
-//            index3 /= [dataArr[2] count];
-            [spraysArr2 addObject:[NSString stringWithFormat:@"%d/%d",index1,index2]];
-            [inspiratoryArr2 addObject:[NSString stringWithFormat:@"%f",index3/index4]];
-            continue;
-        }
         if ([dateStr isEqualToString:timeArr1[i]]) {
-            
             NSArray * arr = [dataArr[1][i] componentsSeparatedByString:@"/"];
             index1 += [arr[0] intValue];
             index2 += [arr[1] intValue];
@@ -212,6 +197,16 @@ static NSString *Cell_TWO = @"cellTwo";
             index2 = 1;
             index4 = 1;
             index3 = [dataArr[2][i] floatValue];
+        }
+        if (i==timeArr1.count -1) {
+//            NSArray * arr = [dataArr[1][i] componentsSeparatedByString:@"/"];
+//            index1 += [arr[0] floatValue];
+//            index2 += [arr[1] floatValue];
+//            index4 ++;
+//            index3 += [dataArr[2][i] floatValue];
+            [spraysArr2 addObject:[NSString stringWithFormat:@"%d/%d",index1,index2]];
+            [inspiratoryArr2 addObject:[NSString stringWithFormat:@"%f",index3/index4]];
+            continue;
         }
     }
     for (NSInteger j = 0; j < timeArr2.count; j++) {
